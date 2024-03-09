@@ -1,1 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() { 
+  char str[80]; 
+  int i; 
+  printf("napishite znach\n"); 
+  fgets(str,sizeof(str), stdin); 
+  for (i = 0; i < 80; i++)
+  { 
+    if (str[i] == 'a')
+	{ 
+      str[i] = 'A';
+	}  
+    else if (str[i] == 'b')
+	{ 
+      str[i] = 'B';
+	} 
+	else if(str[i] == '!')
+	{
+		str[i] = '?';
+	}
+  } 
+  printf("%s\n", str); 
+  return 0;  
+}
